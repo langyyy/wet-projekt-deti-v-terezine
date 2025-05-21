@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+   background: url("thumb_12770682_cover_header.jpeg") no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3); 
+    z-index: 0;
+  }
+  
+  .container {
+    text-align: center;
+    padding-top: 15vh;
+    color: #000;
+    position: relative;
+    z-index: 1;
+  ;
+  }
+  
+  h1 {
+    font-size: 6em;
+    margin-bottom: 100px;
+  }
+  
+  .start-button {
+    display: inline-block;
+    padding: 20px 60px;
+    font-size: 1.5em;
+    border-radius: 20px;
+    border: 2px solid #000;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.1s;
+  }
+  
+  .start-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .background-note {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    font-size: 1em;
+  }
+
+
+
+
+
+
+
+
+  
