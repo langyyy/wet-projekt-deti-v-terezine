@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-image: url("pozadi.png");
+    
 }
 
 .map-container {
@@ -82,3 +82,7 @@ body{
   }
   
  
+.room-background {
+width: 50px;
+  height: 80px;
+}
