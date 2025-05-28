@@ -1,159 +1,180 @@
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-    }
+body {
+  font-family: Arial, sans-serif;
+}
 
-    section {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+section {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .map-section {
-      position: relative;
-      height: 800px;
-      width: 100%;
-      background-image: url('pozadi.png');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px;
-    }
+.map-section {
+  position: relative;
+  width: 100%;
+  height: 475px;
+  background-image: url('pozadi.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
 
-    .map-wrapper {
-      position: relative;
-      flex: 1;
-      height: 100%;
-      margin-right: 20px;
-    }
+.map-wrapper {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  margin-right: 20px;
+}
 
-    .map-image {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      z-index: 1;
-    }
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
 
-    .pin {
-      width: 30px;
-      height: 30px;
-      background-color: red;
-      border-radius: 50% 50% 50% 0;
-      transform: rotate(-45deg);
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      animation: pulse 2s infinite;
-      z-index: 2;
-    }
+.pin {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  animation: pulse 2s infinite;
+  z-index: 2;
+}
 
-    .character-bubble {
-      flex: 1;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+.character-bubble {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-    .speech-bubble {
-      background: #fff;
-      border-radius: 15px;
-      padding: 10px 15px;
-      margin-bottom: 10px;
-      max-width: 200px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
+.speech-bubble {
+  background: #fff;
+  border-radius: 15px;
+  padding: 10px 15px;
+  margin-bottom: 0px;
+  max-width: 400px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
 
-    .character-boy1 {
-      width: 300px;
-    }
+.character-boy1 {
+  width: 250px;
+}
 
-    .character-boy2 {
-      width: 300px;
-    }
+.character-boy2 {
+  width: 100px;
+}
 
-    .room-section {
-      position: relative;
-      width: 100%;
-      height: 800px;
-      background-image: url('pokoj.png');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding: 20px;
-    }
+.room-section {
+  position: relative;
+  width: 100%;
+  height: 475px;
+  background-image: url('pokoj.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 
-    .room-section .character-bubble {
-      align-items: flex-end;
-    }
+.room-section .character-bubble {
+  align-items: center;
+}
 
-    .character-section img,
-    .items-section img {
-      max-width: 100%;
-      height: auto;
-    }
+.items-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
-    .transport-section {
-      width: 100%;
-      overflow: hidden;
-      background: #f0f0f0;
-      position: relative;
-      height: 100px;
-    }
+.items-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
 
-    .train {
-      position: absolute;
-      bottom: 0;
-      left: -200px;
-      height: 100px;
-      animation: moveTrain 5s linear infinite;
-    }
+.items-left img {
+  max-width: 100%;
+  height: auto;
+}
 
-    @keyframes pulse {
-      0% {
-        transform: rotate(-45deg) scale(1);
-        opacity: 1;
-      }
-      50% {
-        transform: rotate(-45deg) scale(1.2);
-        opacity: 0.7;
-      }
-      100% {
-        transform: rotate(-45deg) scale(1);
-        opacity: 1;
-      }
-    }
+.items-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-    @keyframes moveTrain {
-      from { left: -200px; }
-      to { left: 100%; }
-    }
+.character-boy3 {
+  width: 100px;
+}
 
-    @media (max-width: 768px) {
-      section {
-        flex-direction: column;
-      }
-      .map-section, .room-section {
-        flex-direction: column;
-        height: auto;
-      }
-      .map-wrapper, .character-bubble {
-        width: 100%;
-        margin: 0;
-      }
-      .room-section {
-        height: auto;
-      }
-    }
+.transport-section {
+  position: relative;
+  width: 100%;
+  height: 475px;
+  background-image: url('pozadi.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.train {
+  position: absolute;
+  bottom: 0;
+  left: -200px;
+  height: 100px;
+  animation: moveTrain 5s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: rotate(-45deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(-45deg) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotate(-45deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes moveTrain {
+  from { left: -200px; }
+  to { left: 100%; }
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+  }
+  .map-section, .room-section, .items-section {
+    flex-direction: column;
+    height: auto;
+  }
+  .map-wrapper, .character-bubble, .items-left, .items-right {
+    width: 100%;
+    margin: 0;
+  }
+}
