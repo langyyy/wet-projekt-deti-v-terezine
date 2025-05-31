@@ -1,65 +1,108 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-   background: url("thumb_12770682_cover_header.jpeg") no-repeat center center fixed;
-    background-size: cover;
-  }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.3); 
-    z-index: 0;
-  }
+body, html {
+  height: 100%;
+  font-family: 'Patrick Hand', cursive;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background + overlay */
+.background {
+  background-image: url('thumb_12770682_cover_header.jpeg'); /* Vlož svůj obrázek */
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -2;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+/* Obsah */
+.content {
+  text-align: center;
   
-  .container {
-    text-align: center;
-    padding-top: 15vh;
-    color: #000;
-    position: relative;
-    z-index: 1;
-  ;
-  }
-  
+  padding: 4rem 2rem 2rem; /* horní padding zvětšen na 4rem */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Text */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Tlačítko + kluk */
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.start-button {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #000;
+  border-radius: 16px;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.2rem;
+  z-index: 2;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+   padding: 1rem 3rem;         /* zvětší velikost tlačítka */
+  font-size: 1.6rem;
+}
+
+.boy {
+  width: 400px;
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* Responsivita */
+@media (max-width: 768px) {
   h1 {
-    font-size: 6em;
-    margin-bottom: 100px;
+    font-size: 2.2rem;
   }
-  
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .boy {
+    width: 140px;
+  }
+
   .start-button {
-    display: inline-block;
-    padding: 20px 60px;
-    font-size: 1.5em;
-    border-radius: 20px;
-    border: 2px solid #000;
-    background-color: white;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-    transition: background-color 0.1s;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
   }
-  
-  .start-button:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .background-note {
-    position: absolute;
-    bottom: 20px;
-    right: 40px;
-    font-size: 1em;
-  }
-
-
-
-
-
-
-
-
-  
+}
