@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +12,9 @@ body, html {
   overflow: hidden;
 }
 
-/* Background + overlay */
+
 .background {
-  background-image: url('thumb_12770682_cover_header.jpeg'); /* Vlož svůj obrázek */
+  background-image: url('thumb_12770682_cover_header.jpeg'); 
   background-size: cover;
   background-position: center;
   filter: blur(4px);
@@ -33,18 +33,18 @@ body, html {
   z-index: -1;
 }
 
-/* Obsah */
+
 .content {
   text-align: center;
   
-  padding: 4rem 2rem 2rem; /* horní padding zvětšen na 4rem */
+  padding: 4rem 2rem 2rem; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
 }
 
-/* Text */
+
 h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
@@ -55,7 +55,7 @@ h1 {
   margin-bottom: 2rem;
 }
 
-/* Tlačítko + kluk */
+
 .image-wrapper {
   position: relative;
   display: inline-block;
@@ -75,7 +75,7 @@ h1 {
   font-size: 1.2rem;
   z-index: 2;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.9);
-   padding: 1rem 3rem;         /* zvětší velikost tlačítka */
+   padding: 1rem 3rem;        
   font-size: 1.6rem;
 }
 
@@ -87,7 +87,7 @@ h1 {
   z-index: 1;
 }
 
-/* Responsivita */
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2.2rem;
