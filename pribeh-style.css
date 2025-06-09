@@ -50,9 +50,10 @@ section {
   transform: rotate(-45deg);
   position: absolute;
   left: 68%;
-  top: 57%;
+  top: 60%;
   animation: pulse 2s infinite;
   z-index: 2;
+  position: absolute;
 }
 
 .character-bubble {
@@ -145,9 +146,38 @@ section {
   position: absolute;
   bottom: 0;
   left: -200px;
-  height: 200px;
+  height: 300px;
   animation: moveTrain 5s linear infinite;
 }
+
+.speech-wrapper{
+    position: absolute;
+  top: 80px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boy-image {
+  width: 150px;
+  margin-bottom: -50px; 
+  z-index: 3;
+}
+
+.speech-buble {
+  background: #ebc99c;
+  border-radius: 20px;
+  padding: 20px 30px;
+  max-width: 900px;
+  font-size: 1.2em;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
 
 @keyframes pulse {
   0% {
