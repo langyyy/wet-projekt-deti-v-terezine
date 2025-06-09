@@ -73,11 +73,11 @@ section {
 }
 
 .character-boy1 {
-  width: 250px;
+  width: 430px;
 }
 
 .character-boy2 {
-  width: 220px;
+  width: 430px;
 }
 
 .room-section {
@@ -109,6 +109,7 @@ section {
 
 .items-left {
   display: flex;
+  padding-left: 40px;
   flex-direction: column;
   gap: 10px;
   flex: 1;
@@ -116,7 +117,7 @@ section {
 
 .items-left img {
   max-width: 50%;
-  height: 150px;
+  height: 230px;
 }
 
 .items-right {
@@ -128,7 +129,7 @@ section {
 }
 
 .character-boy3 {
-  width: 250px;
+  width: 375px;
 }
 
 .transport-section {
