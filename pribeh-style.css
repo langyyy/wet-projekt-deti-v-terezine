@@ -18,7 +18,7 @@ section {
 .map-section {
   position: relative;
   width: 100%;
-  height: 475px;
+  height: 750px;
   background-image: url('pozadi.png');
   background-size: cover;
   background-position: center;
@@ -83,7 +83,7 @@ section {
 .room-section {
   position: relative;
   width: 100%;
-  height: 475px;
+  height: 750px;
   background-image: url('pokoj.png');
   background-size: cover;
   background-position: center;
@@ -99,6 +99,7 @@ section {
 
 .items-section {
   width: 100%;
+  height: 750px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -133,7 +134,7 @@ section {
 .transport-section {
   position: relative;
   width: 100%;
-  height: 475px;
+  height: 750px;
   background-image: url('koleje.jpg');
   background-size: cover;
   background-position: center;
